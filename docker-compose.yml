@@ -1,0 +1,22 @@
+version: '3'
+services:
+    rabbitmq:
+        image: rabbitmq:3.7.18-management-alpine
+        ports:
+        - 5672:5672 # AMQP port
+        - 15672:15672 # Management console HTTP port
+        environment:
+            RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-default}
+            RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-default}
+    manager:
+        build: ./simple-messaging-manager
+        ports:
+        - 8001:8080
+        depends_on:
+        - rabbitmq
+    worker:
+        build: ./simple-messaging-worker
+        ports:
+        - 8002-8011:8080
+        depends_on:
+        - rabbitmq

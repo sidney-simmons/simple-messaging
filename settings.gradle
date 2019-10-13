@@ -1,0 +1,3 @@
+rootProject.name = 'simple-messaging'
+include 'simple-messaging-worker'
+include 'simple-messaging-manager'

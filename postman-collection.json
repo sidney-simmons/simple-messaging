@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "5b1f65eb-a265-4d68-8624-a35af1bf8b16",
+		"name": "Simple Messaging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notify All",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello world!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/manager/notify-all",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"manager",
+						"notify-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numberOfJobs\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/manager/submit-jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"manager",
+						"submit-jobs"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
