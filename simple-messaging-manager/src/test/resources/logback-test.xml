@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Disable all logging during unit testing -->
+<configuration debug="false" />
