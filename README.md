@@ -13,7 +13,7 @@ Clone the repository and execute the following.  The manager runs on port 8001 a
 
 ```
 // Uses the docker-compose.yml file to start the RabbitMQ server, the manager, and the workers
-gradlew dockerComposeUp
+./gradlew dockerComposeUp
 ```
 
 You can view the service logs by running the following.
