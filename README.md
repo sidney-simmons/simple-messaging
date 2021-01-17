@@ -12,8 +12,11 @@ simple-messaging is a gradle project meant to illustrate basic usage of a Rabbit
 Clone the repository and execute the following.  The manager runs on port 8001 and the workers run on ports 8002 - 8011 depending on how many worker instances you set via the build script (initially set to 3).  You can access the RabbitMQ management console at http://localhost:15672.
 
 ```
-// Uses the docker-compose.yml file to start the RabbitMQ server, the manager, and the workers
-./gradlew dockerComposeUp
+// Builds the manager and worker code
+./gradlew build
+
+// Builds and deploys the RabbitMQ server, the manager, and 5 workers
+docker-compose up --build --scale worker=5
 ```
 
 You can view the service logs by running the following.
