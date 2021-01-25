@@ -1,6 +1,5 @@
 plugins {
     id "org.springframework.boot" version "2.3.8.RELEASE"
-    id "io.spring.dependency-management" version "1.0.9.RELEASE"
     id "com.sidneysimmons.gradle-plugin-external-properties"
     id "java"
 }
